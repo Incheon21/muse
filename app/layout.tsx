@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Analytics } from "@vercel/analytics/next"
 
 // Load Meie Script font from Google
 const meieScript = Meie_Script({
@@ -58,6 +59,7 @@ export default function RootLayout({
       <body
         className={`flex flex-col w-full antialiased ${meieScript.variable} ${futura.variable}`}
       >
+        <Analytics />
         <Navbar />
         {children}
         <Footer />
